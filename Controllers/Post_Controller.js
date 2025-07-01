@@ -3,7 +3,7 @@ const router = express.Router();
 const postSchema = require("../model/postSchema");
 
 router.post("/posts", async (req, res) => {
-  const { title, content } = req.body;
+  const { title, content, postimage, postimageurl } = req.body;
 
   // await postSchema.deleteMany();
 
@@ -11,6 +11,8 @@ router.post("/posts", async (req, res) => {
     const data = new postSchema({
       title: title,
       content: content,
+      postimage: postimage,
+      postimageurl: postimageurl,
     });
 
     const saveData = await data.save();
