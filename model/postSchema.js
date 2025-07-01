@@ -3,6 +3,8 @@ const dataSchema = new mongoose.Schema(
   {
     title: { type: String, required: true },
     content: { type: String, required: true },
+    postimage: { type: String },
+    postimageurl: { type: String },
   },
   { timestamps: true }
 );
